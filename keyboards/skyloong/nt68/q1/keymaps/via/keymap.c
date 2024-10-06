@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_TAB,            KC_Q,     KC_W,     KC_E,     KC_R,    KC_T,     KC_Y,     KC_U,      KC_I,     KC_O,      KC_P,    KC_LBRC,  KC_RBRC,   KC_BSLS,    KC_DEL,
         KC_CAPS,            KC_A,     KC_S,     KC_D,     KC_F,    KC_G,     KC_H,     KC_J,      KC_K,     KC_L,   KC_SCLN,    KC_QUOT,   KC_ENT,              KC_PGUP,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,    KC_B,     KC_N,     KC_M,   KC_COMM,   KC_DOT,   KC_SLSH,    KC_RSFT,    KC_UP,              KC_PGDN,
-        KC_LCTL,  MO(_WIN_INDEX),  KC_LGUI,  KC_LALT,            KC_SPC,                                 KC_RALT,    KC_APP,    KC_LEFT,  KC_DOWN,             KC_RIGHT
+        MO(_WIN_INDEX),  KC_LCTL,  KC_LGUI,  KC_LALT,            KC_SPC,                                 KC_RALT,   KC_RCTL,    KC_LEFT,  KC_DOWN,             KC_RIGHT
     ),
 
      [_MAC] = LAYOUT(
@@ -33,23 +33,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_TAB,            KC_Q,     KC_W,     KC_E,     KC_R,    KC_T,     KC_Y,     KC_U,       KC_I,     KC_O,      KC_P,     KC_LBRC,  KC_RBRC,   KC_BSLS,    KC_DEL,
         KC_CAPS,            KC_A,     KC_S,     KC_D,     KC_F,    KC_G,     KC_H,     KC_J,       KC_K,     KC_L,   KC_SCLN,     KC_QUOT,   KC_ENT,              KC_PGUP,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,    KC_B,     KC_N,     KC_M,    KC_COMM,   KC_DOT,   KC_SLSH,     KC_RSFT,    KC_UP,              KC_PGDN,
-        KC_LCTL,  MO(_MAC_INDEX),  KC_LALT,  KC_LGUI,            KC_SPC,                                  KC_RGUI,   KC_RALT,     KC_LEFT,  KC_DOWN,             KC_RIGHT
+        MO(_MAC_INDEX),  KC_LCTL,  KC_LALT,  KC_LGUI,            KC_SPC,                                  KC_RGUI,   KC_RALT,     KC_LEFT,  KC_DOWN,             KC_RIGHT
     ),
 
     [_WIN_INDEX] =  LAYOUT(
          KC_GRV,    KC_F1,     KC_F2,    KC_F3,    KC_F4,    KC_F5,       KC_F6,    KC_F7,      KC_F8,    KC_F9,   KC_F10,    KC_F11,   KC_F12,    KC_DEL,    KC_INS,
-        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,  RGB_RMOD,  RGB_MOD,   RGB_TOG,    KC_DEL,
+        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   RM_PREV,  RM_NEXT,   RM_TOGG,    KC_DEL,
         _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   _______,  _______,              KC_HOME,
-        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   _______,  RGB_VAI,               KC_END,
-        _______,  _______,   KC_LGUI,  KC_LALT,            _______,                                     KC_RALT,  KC_RCTL,   RGB_SPD,  RGB_VAD,              RGB_SPI
+        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   _______,  RM_VALU,               KC_END,
+        _______,  _______,   KC_LGUI,  KC_LALT,            _______,                                     KC_RALT,   KC_APP,   RM_SPDD,  RM_VALD,              RM_SPDU
     ),
 
     [_MAC_INDEX] = LAYOUT(
         KC_GRV ,   KC_F14,    KC_F15, C(KC_UP),  G(KC_D), G(KC_SPC),  LSG(KC_4),  KC_MPRV,    KC_MPLY,  KC_MNXT,  KC_MUTE,   KC_VOLD,  KC_VOLU,    KC_DEL,    KC_INS,
-        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,  RGB_RMOD,  RGB_MOD,   RGB_TOG,    KC_DEL,
+        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   RM_PREV,  RM_NEXT,   RM_TOGG,    KC_DEL,
         _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   _______,  _______,              KC_HOME,
-        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   _______,  RGB_VAI,               KC_END,
-        _______,  _______,   KC_LALT,  KC_LGUI,             _______,                                    KC_RGUI,  KC_RALT,   RGB_SPD,  RGB_VAD,              RGB_SPI
+        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   _______,  RM_VALU,               KC_END,
+        _______,  _______,   KC_LALT,  KC_LGUI,             _______,                                    KC_RGUI,  KC_RALT,   RM_SPDD,  RM_VALD,              RM_SPDU
     )
 };
 
