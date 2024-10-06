@@ -34,18 +34,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_WIN_INDEX] =  LAYOUT(
          KC_GRV,    KC_F1,     KC_F2,    KC_F3,    KC_F4,    KC_F5,       KC_F6,    KC_F7,      KC_F8,    KC_F9,   KC_F10,    KC_F11,   KC_F12,    KC_DEL,    KC_INS,
-        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   BL_TOGG,  BL_BRTG,   BL_BRTG,    KC_DEL,
+        _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   BL_BRTG,  BL_BRTG,   BL_TOGG,    KC_DEL,
         _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   _______,  _______,              KC_HOME,
         _______,  _______,   _______,  _______,  _______,  _______,     _______,  _______,    _______,  _______,  _______,   _______,    BL_UP,               KC_END,
-        _______,  _______,   KC_LGUI,  KC_LALT,            _______,                                     KC_RALT,  KC_RCTL,    BL_OFF,  BL_DOWN,                BL_ON
+        _______,  _______,   KC_LGUI,  KC_LALT,            _______,                                     KC_RALT,  KC_RCTL,   KC_LEFT,  BL_DOWN,              KC_RIGHT
     ),
 
     [_MAC_INDEX] = LAYOUT(
         KC_GRV ,   KC_F14,    KC_F15, C(KC_UP),  G(KC_D), G(KC_SPC),  LSG(KC_4),  KC_MPRV,    KC_MPLY,  KC_MNXT,  KC_MUTE,   KC_VOLD,  KC_VOLU,    KC_DEL,    KC_INS,
-        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   BL_TOGG,  BL_BRTG,   BL_BRTG,    KC_DEL,
+        _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   BL_BRTG,  BL_BRTG,   BL_TOGG,    KC_DEL,
         _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   _______,  _______,              KC_HOME,
         _______,  _______,   _______,  _______,  _______,   _______,    _______,  _______,    _______,  _______,  _______,   _______,    BL_UP,               KC_END,
-        _______,  _______,   KC_LALT,  KC_LGUI,             _______,                                    KC_RGUI,  KC_RALT,    BL_OFF,  BL_DOWN,                BL_ON
+        _______,  _______,   KC_LALT,  KC_LGUI,             _______,                                    KC_RGUI,  KC_RALT,   KC_LEFT,  BL_DOWN,              KC_RIGHT
     )
 };
 
