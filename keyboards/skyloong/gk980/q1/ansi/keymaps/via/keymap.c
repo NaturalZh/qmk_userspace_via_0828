@@ -39,29 +39,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_WIN_INDEX] =  LAYOUT_all(
         _______,             KC_F14,   KC_F15, G(KC_TAB),  KC_WSCH,  G(C(KC_S)),   KC_SLEP,   KC_MPRV,  KC_MPLY,         KC_MNXT,   KC_MUTE,  KC_VOLD,     KC_VOLU,   G(KC_SPC),      KC_INS,      KC_HOME,  KC_END, KC_PAUSE,
-        _______,  _______,  _______,  _______,   _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,         RGB_TOG,  RGB_RMOD,  RGB_MOD,      KC_DEL,                   KC_NUM,      KC_PSLS, KC_PAST,  KC_PMNS,
+        _______,  _______,  _______,  _______,   _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,         RM_TOGG,   RM_PREV,  RM_NEXT,      KC_DEL,                   KC_NUM,      KC_PSLS, KC_PAST,  KC_PMNS,
         _______,  _______,  _______,  _______,   _______,  _______,     _______,   _______,   _______,  _______,         _______,   _______,  _______,     _______,                    KC_P7,        KC_P8,   KC_P9,  KC_PPLS,
         _______,  _______,  _______,  _______,   _______,  _______,     _______,   _______,   _______,  _______,         _______,   _______,               _______,                    KC_P4,        KC_P5,   KC_P6,
-        _______,  _______,  _______,  _______,   _______,  _______,     _______,   _______,   _______,  _______,         _______,                          _______,  RGB_VAI,          KC_P1,        KC_P2,   KC_P3,  KC_PENT,
-        KC_LCTL,  KC_LGUI,  KC_LALT,             _______,  _______,                _______,             KC_RALT,         _______,    KC_APP,               RGB_SPD,  RGB_VAD,      RGB_SPI,          KC_P0,  KC_PDOT
+        _______,  _______,  _______,  _______,   _______,  _______,     _______,   _______,   _______,  _______,         _______,                          _______,  RM_VALU,          KC_P1,        KC_P2,   KC_P3,  KC_PENT,
+        KC_LCTL,  KC_LGUI,  KC_LALT,             _______,  _______,                _______,             KC_RALT,         _______,    KC_APP,               RM_SPDD,  RM_VALD,      RM_SPDU,          KC_P0,  KC_PDOT
     ),
 
     [_MAC_INDEX] = LAYOUT_all(
         _______,              KC_F1,    KC_F2,    KC_F3,    KC_F4,       KC_F5,     KC_F6,     KC_F7,    KC_F8,          KC_F9,     KC_F10,   KC_F11,   KC_F12,   G(KC_SPC),      KC_INS,      KC_HOME,  KC_END, KC_PAUSE,
-        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,        RGB_TOG,   RGB_RMOD,  RGB_MOD,   KC_DEL,                   KC_NUM,      KC_PSLS, KC_PAST,  KC_PMNS,
+        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,        RM_TOGG,    RM_PREV,  RM_NEXT,   KC_DEL,                   KC_NUM,      KC_PSLS, KC_PAST,  KC_PMNS,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,        _______,    _______,  _______,  _______,                    KC_P7,        KC_P8,   KC_P9,  KC_PPLS,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,        _______,    _______,            _______,                    KC_P4,        KC_P5,   KC_P6,
-        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,        _______,                        _______,  RGB_VAI,          KC_P1,        KC_P2,   KC_P3,  KC_PENT,
-        KC_LCTL,  KC_LALT,  KC_LGUI,            _______,  _______,                _______,             KC_RCMD,        _______,    KC_RALT,            RGB_SPD,  RGB_VAD,      RGB_SPI,          KC_P0,  KC_PDOT
+        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,        _______,                        _______,  RM_VALU,          KC_P1,        KC_P2,   KC_P3,  KC_PENT,
+        KC_LCTL,  KC_LALT,  KC_LGUI,            _______,  _______,                _______,             KC_RCMD,        _______,    KC_RALT,            RM_SPDD,  RM_VALD,      RM_SPDU,          KC_P0,  KC_PDOT
     )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [_WIN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RGB_VAD, RGB_VAI),ENCODER_CCW_CW(C(KC_WH_D), C(KC_WH_U)), ENCODER_CCW_CW(G(C(KC_LEFT)), G(C(KC_RGHT)))},
+    [_WIN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RM_VALD, RM_VALU),ENCODER_CCW_CW(C(MS_WHLD), C(MS_WHLU)), ENCODER_CCW_CW(G(C(KC_LEFT)), G(C(KC_RGHT)))},
     [_MAC] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_F14, KC_F15),ENCODER_CCW_CW(G(KC_MINS), G(KC_EQL)), ENCODER_CCW_CW(C(KC_UP), C(KC_DOWN))},
-    [_WIN_INDEX] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RGB_HUD, RGB_HUI), ENCODER_CCW_CW(RGB_VAD, RGB_VAI),ENCODER_CCW_CW(RGB_SPD, RGB_SPI), ENCODER_CCW_CW(RGB_SAD, RGB_SAI)},
-    [_MAC_INDEX] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RGB_HUD, RGB_HUI), ENCODER_CCW_CW(RGB_VAD, RGB_VAI),ENCODER_CCW_CW(RGB_SPD, RGB_SPI), ENCODER_CCW_CW(RGB_SAD, RGB_SAI)}
+    [_WIN_INDEX] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RM_HUED, RM_HUEU), ENCODER_CCW_CW(RM_VALD, RM_VALU),ENCODER_CCW_CW(RM_SPDD, RM_SPDU), ENCODER_CCW_CW(RM_SATD, RM_SATU)},
+    [_MAC_INDEX] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RM_HUED, RM_HUEU), ENCODER_CCW_CW(RM_VALD, RM_VALU),ENCODER_CCW_CW(RM_SPDD, RM_SPDU), ENCODER_CCW_CW(RM_SATD, RM_SATU)}
 };
 #endif
 
@@ -120,7 +120,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 #  ifdef RGB_MATRIX_ENABLE
-    case RGB_TOG:
+    case RM_TOGG:
          if (record->event.pressed) {
             switch (rgb_matrix_get_flags()) {
                     case LED_FLAG_ALL: {
@@ -133,7 +133,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
         }
         return false;
-    case RGB_VAI:
+    case RM_VALU:
        rgb_matrix_set_flags(LED_FLAG_ALL);
        return true;
 #    endif
