@@ -43,30 +43,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_WIN_INDEX] =  LAYOUT_all(
-        _______,             KC_F14,   KC_F15, G(KC_TAB),  KC_WSCH, G(C(KC_S)), LSG(KC_S),   KC_MPRV,  KC_MPLY,    KC_MNXT,      KC_MUTE,  KC_VOLD,  KC_VOLU,   RGB_TOG,
-        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,    RGB_TOG,     RGB_RMOD,  RGB_MOD,   KC_DEL,    KC_END,
+        _______,             KC_F14,   KC_F15, G(KC_TAB),  KC_WSCH, G(C(KC_S)), LSG(KC_S),   KC_MPRV,  KC_MPLY,    KC_MNXT,      KC_MUTE,  KC_VOLD,  KC_VOLU,   RM_TOGG,
+        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,    RM_TOGG,      RM_PREV,  RM_NEXT,   KC_DEL,    KC_END,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,  _______,  _______,    KC_INS,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            _______,   KC_PGDN,
-        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            RGB_VAI,
-        _______,  _______,  _______,            _______,  _______,     _______,                        _______,    _______,      _______,  RGB_SPD,  RGB_VAD,   RGB_SPI
+        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            RM_VALU,
+        _______,  _______,  _______,            _______,  _______,     _______,                        _______,    _______,      _______,  RM_SPDD,  RM_VALD,   RM_SPDU
     ),
 
     [_MAC_INDEX] = LAYOUT_all(
-        _______,              KC_F1,    KC_F2,    KC_F3,    KC_F4,       KC_F5,     KC_F6,     KC_F7,    KC_F8,      KC_F9,       KC_F10,   KC_F11,   KC_F12,   RGB_TOG,
-        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,    RGB_TOG,     RGB_RMOD,  RGB_MOD,   KC_DEL,    KC_END,
+        _______,              KC_F1,    KC_F2,    KC_F3,    KC_F4,       KC_F5,     KC_F6,     KC_F7,    KC_F8,      KC_F9,       KC_F10,   KC_F11,   KC_F12,   RM_TOGG,
+        _______,  _______,  _______,  _______,  _______,  _______,    DF(_WIN),  DF(_MAC),   _______,  _______,    RM_TOGG,      RM_PREV,  RM_NEXT,   KC_DEL,    KC_END,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,  _______,  _______,    KC_INS,
         _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            _______,   KC_PGDN,
-        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            RGB_VAI,
-        _______,  _______,  _______,            _______,  _______,     _______,                        _______,    _______,      _______,  RGB_SPD,  RGB_VAD,   RGB_SPI
+        _______,  _______,  _______,  _______,  _______,  _______,     _______,   _______,   _______,  _______,    _______,      _______,            RM_VALU,
+        _______,  _______,  _______,            _______,  _______,     _______,                        _______,    _______,      _______,  RM_SPDD,  RM_VALD,   RM_SPDU
     )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [_WIN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(C(KC_WH_D), C(KC_WH_U)), ENCODER_CCW_CW(G(C(KC_LEFT)),G(C(KC_RGHT))) },
+    [_WIN] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(RM_VALD, RM_VALU), ENCODER_CCW_CW(C(MS_WHLD), C(MS_WHLU)), ENCODER_CCW_CW(G(C(KC_LEFT)),G(C(KC_RGHT))) },
     [_MAC] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_F14, KC_F15), ENCODER_CCW_CW(G(KC_MINS), G(KC_EQL)), ENCODER_CCW_CW(C(KC_UP), C(KC_DOWN)) },
-    [_WIN_INDEX] = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_HUD, RGB_HUI), ENCODER_CCW_CW(RGB_SPD, RGB_SPI), ENCODER_CCW_CW(RGB_SAD, RGB_SAI) },
-    [_MAC_INDEX] = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI), ENCODER_CCW_CW(RGB_HUD, RGB_HUI), ENCODER_CCW_CW(RGB_SPD, RGB_SPI), ENCODER_CCW_CW(RGB_SAD, RGB_SAI) }
+    [_WIN_INDEX] = { ENCODER_CCW_CW(RM_VALD, RM_VALU), ENCODER_CCW_CW(RM_HUED, RM_HUEU), ENCODER_CCW_CW(RM_SPDD, RM_SPDU), ENCODER_CCW_CW(RM_SATD, RM_SATU) },
+    [_MAC_INDEX] = { ENCODER_CCW_CW(RM_VALD, RM_VALU), ENCODER_CCW_CW(RM_HUED, RM_HUEU), ENCODER_CCW_CW(RM_SPDD, RM_SPDU), ENCODER_CCW_CW(RM_SATD, RM_SATU) }
 };
 #endif
 
@@ -149,7 +149,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 #    ifdef RGB_MATRIX_ENABLE
-       case RGB_TOG:
+       case RM_TOGG:
            if (record->event.pressed) {
                switch (rgb_matrix_get_flags()) {
                     case LED_FLAG_ALL: {
@@ -163,7 +163,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
 
-       case RGB_VAI:
+       case RM_VALU:
        rgb_matrix_set_flags(LED_FLAG_ALL);
        return true;
 #   endif
